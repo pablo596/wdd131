@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131: Dynamic Web Fundamentals - Rubia M. Francesco</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f0f0f0;
+      }
+
+      .header {
+        background-color: #1e4164;
+        color: white;
+        padding: 1rem;
+      }
+
+      .header h1 {
+        font-size: 1.5rem;
+      }
+
+      .nav {
+        background-color: #333;
+        padding: 1rem;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+
+      .main-content {
+        max-width: 1200px;
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+      }
+
+      .card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-header {
+        background-color: #1e4164;
+        color: white;
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .card-content {
+        padding: 2rem;
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 2rem;
+      }
+
+      .profile-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      .profile-image {
+        max-width: 200px;
+        border-radius: 4px;
+      }
+
+      .madagascar-section {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+        align-items: start;
+      }
+
+      .flag {
+        width: 150px;
+        border: 1px solid #ddd;
+      }
+
+      .resources-list {
+        list-style-type: none;
+      }
+
+      .resources-list li {
+        margin: 1rem 0;
+      }
+
+      .resources-list a {
+        color: #4a5de8;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+
+      .resources-list a:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        background-color: #1e4164;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+
+      .footer .flower {
+        color: pink;
+      }
+
+      .footer .modification-date {
+        color: #ffd700;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>WDD 131: Dynamic Web Fundamentals - Rubia M. Francesco</h1>
+    </header>
+
+    <nav class="nav">
+      <a href="#">LinkedIn</a>
+      <a href="#">Canvas</a>
+      <a href="#">Scripture</a>
+      <a href="#">Final Project</a>
+    </nav>
+
+    <main class="main-content">
+      <section class="card">
+        <div class="card-header">About Me</div>
+        <div class="card-content">
+          <div class="about-content">
+            <div class="profile-text">
+              <p>
+                My name is Pablo, and I’m a passionate software developer
+                specializing in mobile development. I currently live in Ecuador
+                with my wonderful family, including my wife, two beautiful
+                babies, and two playful dogs. I enjoy learning new technologies,
+                solving challenges, and creating apps that improve people's
+                lives. In my free time, I love spending time with my family,
+                helping around the house, and playing with my pets. I also enjoy
+                exploring new hobbies, such as photography, gaming, and diving
+                into personal development topics.
+              </p>
+            </div>
+            <img
+              src="./images/profile.jpeg"
+              alt="Profile photo"
+              class="profile-image"
+            />
+          </div>
+
+          <div class="ecuador-section">
+            <div>
+              <img
+                src="./images/ecuador-flag.png"
+                alt="Flag of Ecuador"
+                class="flag"
+              />
+              <p><em>Official Flag of Ecuador</em></p>
+            </div>
+            <div>
+              <h2>Quito, Ecuador</h2>
+              <p>
+                Ecuador is a country straddling the equator on South America's
+                west coast. Its diverse landscape encompasses Amazon jungle,
+                Andean highlands, and the wildlife-rich Galápagos Islands. The
+                country is famous for its rich biodiversity, being one of the 17
+                megadiverse countries in the world. Ecuador is known for its
+                volcanoes, including Cotopaxi, historic cities like Quito, and
+                unique wildlife such as the Galápagos tortoises.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">Web Dev Resources</div>
+        <div class="card-content">
+          <ul class="resources-list">
+            <li><a href="#">Dev.to Community</a></li>
+            <li><a href="#">Smashing Magazine</a></li>
+            <li><a href="#">CSS Tricks</a></li>
+            <li><a href="#">W3 Schools</a></li>
+            <li><a href="#">Udemy</a></li>
+            <li><a href="#">Image Placeholder</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        ©2025 <span class="flower">❀</span> Rubia Magdelena Francesco
+        <span class="flower">❀</span> Madagascar
+      </div>
+      <div class="modification-date">
+        Last Modification: 01/09/2025 12:13:33
+      </div>
+    </footer>
+  </body>
+</html>
