@@ -1,10 +1,10 @@
 const hamburgerButton = document.getElementById("hamburgerButton");
 const navigation = document.getElementById("navigation");
 
-// Alternar visibilidad del menú
+// Toggle menu visibility
 hamburgerButton.addEventListener("click", () => {
   navigation.classList.toggle("visible");
-  // Cambiar icono entre ☰ y ✖
+  // Change icon between ☰ and ✖
   hamburgerButton.textContent = navigation.classList.contains("visible")
     ? "✖"
     : "☰";
