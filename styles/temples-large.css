@@ -1,0 +1,61 @@
+/* Cambia el diseño a varias columnas en pantallas grandes */
+.gallery {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+#hamburgerButton {
+  display: none; /* Oculta el botón hamburguesa en pantallas grandes */
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery img {
+  max-width: 300px; /* Ajusta según el diseño deseado */
+  margin: 0 auto;
+}
+
+/* Diseño para pantallas medianas: 2 columnas */
+@media (min-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  }
+}
+
+/* Diseño para pantallas grandes: 3 columnas */
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  }
+}
+
+/* Header para pantallas grandes */
+/* Header para pantallas grandes */
+@media (min-width: 768px) {
+  header {
+    justify-content: space-between; /* Alinear título y menú */
+  }
+
+  nav {
+    display: flex !important; /* Siempre visible en horizontal */
+    flex-direction: row;
+    position: static;
+    gap: 20px; /* Espaciado entre los elementos */
+    width: auto;
+  }
+
+  nav a {
+    padding: 0 15px; /* Espaciado horizontal para enlaces */
+  }
+
+  #hamburgerButton {
+    display: none; /* Ocultar botón hamburguesa */
+  }
+}

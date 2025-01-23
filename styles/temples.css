@@ -1,0 +1,119 @@
+/* Estilos generales */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+
+/* Header General */
+/* Header general */
+/* Header general */
+/* Header general */
+header {
+  display: flex;
+  justify-content: space-between; /* Alinear título a la izquierda y botón a la derecha */
+  align-items: center;
+  background-color: #4b0082; /* Cambia si lo deseas */
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Título del header */
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Menú de navegación */
+nav {
+  display: none; /* Ocultamos por defecto en móvil */
+  flex-direction: column; /* Organización vertical */
+  background-color: #4b0082;
+  position: absolute;
+  top: 55px; /* Aseguramos que el menú no cubra el header */
+  right: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para distinguir el menú */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  display: block;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  background-color: #6a0dad; /* Efecto hover */
+}
+
+/* Botón de menú hamburguesa */
+#hamburgerButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Menú visible al hacer clic */
+nav.visible {
+  display: flex;
+}
+
+/* Main */
+main {
+  padding: 20px;
+}
+
+/* Diseño base móvil: 1 columna */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr; /* Una sola columna */
+  gap: 20px; /* Espaciado entre los elementos */
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto; /* Mantener proporciones */
+  border-radius: 10px; /* Bordes redondeados opcionales */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #4b0082;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+/* Ajuste general para las imágenes en la galería */
+.gallery img {
+  max-width: 100%;
+  height: auto; /* Mantiene las proporciones */
+  border-radius: 10px; /* Opcional: Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: Sombra */
+}
