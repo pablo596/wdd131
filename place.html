@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecuador</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="shape yellow"></div>
+      <div class="shape blue"></div>
+      <div class="shape red"></div>
+      <h1>Ecuador</h1>
+    </header>
+
+    <main>
+      <section class="hero">
+        <picture>
+          <source
+            srcset="images/ecuador-large.webp"
+            media="(min-width: 768px)"
+          />
+          <img src="images/ecuador-small.webp" alt="Image of Ecuador" />
+        </picture>
+      </section>
+
+      <section class="data">
+        <h2>Data</h2>
+        <ul>
+          <li><strong>Area:</strong> 256,370 sq km</li>
+          <li><strong>Population:</strong> 17,888,475</li>
+          <li><strong>Capital:</strong> Quito</li>
+          <li><strong>Languages:</strong> Spanish, Quechua</li>
+          <li><strong>Currency:</strong> US Dollar</li>
+          <li>
+            <strong>Time Zone:</strong> UTC-5 (mainland), UTC-6 (Galápagos)
+          </li>
+          <li><strong>Calling Code:</strong> +593</li>
+          <li><strong>Internet TLD:</strong> .ec</li>
+        </ul>
+      </section>
+
+      <section class="weather">
+        <h2>Weather</h2>
+        <img src="images/cloudy.png" alt="Weather Icon" class="weather-icon" />
+        <ul>
+          <li><strong>Temperature:</strong> <span id="temp">22</span> °C</li>
+          <li><strong>Conditions:</strong> Sunny</li>
+          <li><strong>Wind:</strong> <span id="wind-speed">10</span> km/h</li>
+          <li><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Ecuador</p>
+      <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("last-modified").textContent =
+        document.lastModified;
+
+      function calculateWindChill(temp, windSpeed) {
+        if (temp <= 10 && windSpeed > 4.8) {
+          return (
+            (
+              13.12 +
+              0.6215 * temp -
+              11.37 * Math.pow(windSpeed, 0.16) +
+              0.3965 * temp * Math.pow(windSpeed, 0.16)
+            ).toFixed(1) + " °C"
+          );
+        } else {
+          return "N/A";
+        }
+      }
+
+      document.getElementById("wind-chill").textContent = calculateWindChill(
+        parseFloat(document.getElementById("temp").textContent),
+        parseFloat(document.getElementById("wind-speed").textContent)
+      );
+    </script>
+  </body>
+</html>
