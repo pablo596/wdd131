@@ -7,21 +7,23 @@
     <meta name="author" content="Pablo Palacios">
     <title>Filtered Templates</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/filtered-temple.css">
 </head>
 <body>
     <header>
         <h1>Temple Album</h1>
         <nav>
-            <button onclick="filterTemplates('old')">Old</button>
-            <button onclick="filterTemplates('new')">New</button>
-            <button onclick="filterTemplates('large')">Large</button>
-            <button onclick="filterTemplates('small')">Small</button>
-            <button onclick="filterTemplates('all')">Home</button>
+            <a href="#" onclick="filterTemplates('old')">Old</a>
+            <a href="#" onclick="filterTemplates('new')">New</a>
+            <a href="#" onclick="filterTemplates('large')">Large</a>
+            <a href="#" onclick="filterTemplates('small')">Small</a>
+            <a href="#" onclick="filterTemplates('all')">Home</a>
         </nav>
     </header>
 
-    <main id="template-container"></main>
+    <main id="template-container">
+        <h2>Temple List</h2>
+    </main>
 
     <footer>
         <p>&copy; <span id="year"></span>. Last Modified: <span id="last-modified"></span> - Pablo Palacios</p>
