@@ -5,7 +5,7 @@ const templates = [
     dedicated: "2005, August 7",
     area: 11500,
     imageUrl:
-      "https://www.churchofjesuschrist.org/imgs/7210c09be95c4474772ae52e5f31c23c08112784/full/800%2C/0/default",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-gallery/aba_nigeria.jpg",
   },
   {
     templeName: "Manti Utah",
@@ -13,7 +13,7 @@ const templates = [
     dedicated: "1888, May 21",
     area: 7470,
     imageUrl:
-      "https://www.churchofjesuschrist.org/imgs/d9c313eb96c173d0ad32f21f461ce994129c9e8d/full/800%2C/0/default",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-gallery/manti_utah.jpg",
   },
   {
     templeName: "Payson Utah",
@@ -21,7 +21,7 @@ const templates = [
     dedicated: "2015, June 7",
     area: 96013,
     imageUrl:
-      "https://news-pacific.churchofjesuschrist.org/media/400x400/Payson_Temple_Exterior_Day2015_resized.jpg",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-gallery/payson_utah.jpg",
   },
   {
     templeName: "Yigo Guam",
@@ -29,7 +29,7 @@ const templates = [
     dedicated: "2020, May 2",
     area: 6601,
     imageUrl:
-      "https://news-gu.churchofjesuschrist.org/media/640x480/yigo-temple-b.JPG",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-gallery/yigo_guam.jpg",
   },
   {
     templeName: "Washington D.C.",
@@ -37,7 +37,7 @@ const templates = [
     dedicated: "1974, November 19",
     area: 156558,
     imageUrl:
-      "https://assets.churchofjesuschrist.org/19/c1/19c13ca567ed6bd0d72246717ee4dc34c35c8f6f/washington_dc_temple_lds.jpeg",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-gallery/washington_dc.jpg",
   },
   {
     templeName: "Lima Peru",
@@ -45,7 +45,7 @@ const templates = [
     dedicated: "1986, January 10",
     area: 9600,
     imageUrl:
-      "https://noticias-pe.laiglesiadejesucristo.org/media/960x720/Exterior-Templo-de-los-Olivos.jpeg",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-gallery/lima_peru.jpg",
   },
   {
     templeName: "Mexico City Mexico",
@@ -53,7 +53,7 @@ const templates = [
     dedicated: "1983, December 2",
     area: 116642,
     imageUrl:
-      "https://newsroom.churchofjesuschrist.org/media/960x540/orig_1_Vista_exterior-1.jpg",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-gallery/mexico_city_mexico.jpg",
   },
   {
     templeName: "Guayaquil Ecuador",
@@ -61,7 +61,7 @@ const templates = [
     dedicated: "1999, August 1",
     area: 108000,
     imageUrl:
-      "https://newsroom.churchofjesuschrist.org/media/960x540/Guayaquil-Ecuador-Temple1.jpg",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-gallery/guayaquil_ecuador.jpg",
   },
   {
     templeName: "Quito Ecuador",
@@ -69,7 +69,7 @@ const templates = [
     dedicated: "2022, November 20",
     area: 9350,
     imageUrl:
-      "https://noticias-ec.laiglesiadejesucristo.org/media/960x540/Templo-de-Quito_exterior.jpeg",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-gallery/quito_ecuador.jpg",
   },
 ];
 
@@ -81,14 +81,14 @@ function displayTemplates(filteredTemplates) {
     const templateCard = document.createElement("div");
     templateCard.className = "template-card";
     templateCard.innerHTML = `
-                <h2>${template.templeName}</h2>
-                <p><strong>Location:</strong> ${template.location}</p>
-                <p><strong>Dedicated:</strong> ${template.dedicated}</p>
-                <p><strong>Size:</strong> ${template.area.toLocaleString()} sqft</p>
-                <img src="${template.imageUrl}" alt="${
+            <h2>${template.templeName}</h2>
+            <p><strong>Location:</strong> ${template.location}</p>
+            <p><strong>Dedicated:</strong> ${template.dedicated}</p>
+            <p><strong>Size:</strong> ${template.area.toLocaleString()} sqft</p>
+            <img src="${template.imageUrl}" alt="${
       template.templeName
     }" loading="lazy">
-            `;
+        `;
     container.appendChild(templateCard);
   });
 }
