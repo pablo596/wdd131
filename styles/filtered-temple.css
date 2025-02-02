@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   background-color: #f4f4f9;
   margin: 0;
   padding: 0;
@@ -20,16 +20,16 @@ nav {
   margin-bottom: 1em;
 }
 
-nav button {
+nav a {
   padding: 0.5em 1em;
   background-color: #2e7d32;
   color: white;
-  border: none;
   border-radius: 5px;
-  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-nav button:hover {
+nav a:hover {
   background-color: #1b5e20;
 }
 
@@ -61,7 +61,5 @@ footer {
   color: white;
   padding: 0.5em 0;
   text-align: center;
-  /* position: absolute; */
   width: 100%;
-  bottom: 0;
 }
