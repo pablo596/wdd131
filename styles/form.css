@@ -1,0 +1,99 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Fieldset and Rating Styles */
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    font-size: 2em;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Hover and Checked Effects for Rating Stars */
+.rating input[type="radio"]:checked~label,
+.rating label:hover,
+.rating label:hover~label {
+    color: gold;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 600px) {
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+}

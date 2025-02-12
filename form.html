@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form action="review.html" method="get">
+            <!-- Product Selection -->
+            <div class="form-group">
+                <label for="product">Product Name:</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    <!-- Options will be added dynamically using JavaScript -->
+                </select>
+            </div>
+
+            <!-- Overall Rating -->
+            <fieldset class="form-group">
+                <legend>Overall Rating</legend>
+                <div class="rating">
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                    <label for="rating1">&#9733;</label>
+                    <input type="radio" id="rating2" name="rating" value="2">
+                    <label for="rating2">&#9733;</label>
+                    <input type="radio" id="rating3" name="rating" value="3">
+                    <label for="rating3">&#9733;</label>
+                    <input type="radio" id="rating4" name="rating" value="4">
+                    <label for="rating4">&#9733;</label>
+                    <input type="radio" id="rating5" name="rating" value="5">
+                    <label for="rating5">&#9733;</label>
+                </div>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <div class="form-group">
+                <label for="install-date">Date of Installation:</label>
+                <input type="date" id="install-date" name="install-date" required>
+            </div>
+
+            <!-- Useful Features -->
+            <fieldset class="form-group">
+                <legend>Useful Features</legend>
+                <div class="features">
+                    <input type="checkbox" id="feature1" name="features" value="Easy to use">
+                    <label for="feature1">Easy to use</label>
+                    <input type="checkbox" id="feature2" name="features" value="High efficiency">
+                    <label for="feature2">High efficiency</label>
+                    <input type="checkbox" id="feature3" name="features" value="Attractive design">
+                    <label for="feature3">Attractive design</label>
+                </div>
+            </fieldset>
+
+            <!-- Written Review -->
+            <div class="form-group">
+                <label for="review">Written Review (Optional):</label>
+                <textarea id="review" name="review" rows="4" placeholder="Write your review here"></textarea>
+            </div>
+
+            <!-- User Name -->
+            <div class="form-group">
+                <label for="username">User Name (Optional):</label>
+                <input type="text" id="username" name="username" placeholder="Your name">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <input type="submit" value="Submit Review">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+
+    <!-- JavaScript to populate the product list -->
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>
