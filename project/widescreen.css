@@ -225,6 +225,7 @@ nav a:hover {
 
 .contact-opt {
     display: flex;
+    align-items: center;
     height: 50px;
 }
 
