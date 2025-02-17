@@ -1,0 +1,503 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Nunito&display=swap');
+
+
+:root {
+    --primary-color: #90BE6D;
+    --secondary-color: #F8961E;
+    --accent1-color: #43AA8B;
+    --accent2-color: #F9C74F;
+    /* change the values below to your chosen font(s) */
+    --heading-font: 'Balsamiq Sans';
+    --paragraph-font: 'Nunito';
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: #3f618d;
+    /* headlines on a white background */
+    --headline-color-on-color: #FFFFFF;
+    /* headlines on a colored background */
+    --paragraph-color-on-white: #dd591e;
+    /* paragraph text on a white background */
+    --paragraph-color-on-color: #FFFFFF;
+    /* paragraph text on a colored background */
+    --text-background-color: #000000;
+    --nav-link-color: #F9C74F;
+    --nav-background-color: #3f618d;
+    --nav-hover-link-color: #F9C74F;
+    --nav-hover-background-color: #0c9fce;
+}
+
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+
+html {
+    /* background-color: var(--primary-color); */
+}
+
+body {
+    max-width: 80%;
+    margin: 0 auto;
+    /* background-color: white; */
+    padding: 1em;
+}
+
+img {
+    max-width: 30%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white);
+}
+
+p,
+label {
+    font-family: var(--paragraph-font);
+}
+
+.paragraph-one,
+.paragraph-two,
+.paragraph-three {
+    font-size: 1.5em !important;
+}
+
+#content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* HEADER AND NAVIGATION */
+
+header {
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 10vh;
+    height: 5vh;
+}
+
+.logo-box {
+    display: flex;
+    /* text-align: center; */
+    /* display: block; */
+    /* vertical-align: middle; */
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 100px 0px 0px 100px;
+    height: 5vh;
+    width: 35vw;
+    padding-top: 0.75vh;
+    padding-bottom: 0.75vh;
+}
+
+.logo-box img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: 80%;
+}
+
+/* HAMBURGER MENU FOR MOBILE */
+.nav-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: var(--secondary-color);
+        border-radius: 10px;
+        padding: 15px;
+        text-align: right;
+        width: 200px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100% !important;
+    border-radius: 0px 100px 100px 0px;
+    background-color: var(--secondary-color);
+    line-height: 2em;
+    text-align: right;
+    font-size: 1.5em;
+    height: 5vh;
+    padding-top: 0.75vh;
+    padding-bottom: 0.75vh;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+
+nav li {
+    align-self: center;
+}
+
+nav a {
+    min-width: 70px;
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-size: 0.7em;
+    color: var(--paragraph-color-on-color);
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: 20%;
+}
+
+.page-active {
+    border-bottom: 2px solid var(--nav-link-color);
+    border-radius: 20%;
+}
+
+/* HAMBURGER MENU FOR MOBILE */
+.nav-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 50px;
+        top: 20px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: var(--secondary-color);
+        border-radius: 10px;
+        padding: 15px;
+        text-align: right;
+        width: 200px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .first-section,
+    .second-section,
+    .first-section-about {
+        height: 90vh !important;
+    }
+
+    .first-section .section-container .headline-one,
+    .first-section .section-container .paragraph-one {
+        text-align: center;
+    }
+
+
+
+    .first-section .section-container .image-one {
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* Dos columnas de igual tamaño */
+        grid-template-rows: auto auto;
+        /* Dos filas automáticas */
+        gap: 1rem;
+        /* Espacio entre los elementos */
+        align-items: center;
+        /* Alineación vertical */
+        text-align: center;
+        /* Centrar contenido */
+    }
+
+    .image-two {
+        grid-column: 1 / 3;
+        /* Ocupa la primera columna */
+        grid-row: 1 / 2;
+        left: -70vw;
+        /* height: 100px; */
+        top: 40vh;
+        /* En la primera fila */
+        /* justify-self: start; */
+        /* Alinear a la izquierda */
+    }
+
+    .image-one img {}
+
+    .headline-two {
+        grid-column: 2 / 4;
+        /* Ocupa la segunda columna */
+        grid-row: 2 / 3;
+        text-align: right;
+        /* En la primera fila */
+        /* margin-top: ; */
+        /* justify-se/lf: end; */
+        /* Alinear a la derecha */
+        /* text-align: right; */
+        /* width: 10vw; */
+    }
+
+    .paragraph-two {
+        grid-column: 1 / 3;
+        /* Ocupa ambas columnas */
+        grid-row: 3 / 4;
+        /* Segunda fila */
+        text-align: center;
+    }
+
+
+    .third-section .section-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .headline-three {
+        order: -2;
+        /* Se mueve arriba en móviles */
+        font-size: 1.8em;
+    }
+
+    .paragraph-three {
+        order: -1;
+        /* Se coloca después del título */
+        font-size: 1em;
+        margin-bottom: 15px;
+        padding: 0 10%;
+    }
+
+    .carousel {
+        order: 3;
+        /* Se mantiene como último */
+        width: 100%;
+    }
+
+    .carousel-slide {
+        flex: 0 0 70%;
+    }
+
+
+    .about,
+    .contact,
+    .site-plan {
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer p {
+        width: 100%;
+    }
+
+    .download {
+        width: 90%;
+    }
+
+    .stores img {
+        width: 45vw;
+        max-width: 100% !important;
+        margin: auto;
+    }
+
+    .copy-info {
+        text-align: center;
+        font-size: 0.8em;
+        padding-top: 10px;
+    }
+
+    /* About Page */
+    .first-section-about,
+    .second-section-about {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .first-section-about .section-container,
+    .second-section-about .section-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .headline-one,
+    .headline-two {
+        font-size: 1.8em;
+        /* Reduce el tamaño para mejor lectura */
+        text-align: center;
+    }
+
+    .paragraph-one,
+    .paragraph-two {
+        font-size: 1.2em;
+        padding: 0 10px;
+    }
+
+    .image-one-about img,
+    .image-two-about img,
+    .dual-image img {
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .dual-image {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .dual-image img {
+        width: 100%;
+    }
+
+    .image-three-about {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .image-three-about .dual-image img {
+        max-width: 80%;
+    }
+
+    /* Contact Page */
+
+    .section-title {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .section-title h1 {
+        font-size: 1.8em;
+    }
+
+    .section-title h3 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+
+    /* Moving the contact image below the title */
+    .contact-img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        order: 2;
+        /* Moves the image after the title */
+        margin-bottom: 20px;
+    }
+
+    .contact-img img {
+        display: none;
+    }
+
+    /* Form adjustments */
+    form {
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    form ul {
+        padding: 0;
+    }
+
+    form li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* Align labels to the left */
+        text-align: left;
+        width: 100%;
+    }
+
+    form li label {
+        font-size: 1.2em;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    form li input,
+    form li textarea {
+        width: 100%;
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    form li .button-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    form li button {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    /* Adjust feedback message */
+    .alert {
+        font-size: 1em;
+        text-align: center;
+        padding: 10px;
+    }
+}
