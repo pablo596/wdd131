@@ -387,7 +387,7 @@ nav a:hover {
 }
 
 .icon-color1 {
-    fill: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .first-section-about,
